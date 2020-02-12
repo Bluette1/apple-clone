@@ -5,7 +5,7 @@
   "main": "index.html",
   "scripts": {
     "lint": " npx stylelint ./index.css",
-    "lint-fix": "npx stylelint --fix index.css",
+    "lint-fix": "npx stylelint --fix index.css build/index.css",
     "html-validator": "npx html-validator-cli --quiet --file index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
