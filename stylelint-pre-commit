@@ -1,0 +1,25 @@
+#!/bin/bash
+
+branch="$(git rev-parse --abbrev-ref --HEAD)"
+
+# Do not commit directly to master at this stage
+if [ "$branch" = "master" ]; then
+  echo "Committing directly to master branch is forbidden at this stage"
+  exit 1 
+fi
+
+# Run gulp build 
+gulp buildcss
+
+
+#List of all staged modified files
+STAGED=($(git diff --cached --name-only --diff-filter=ACDMR | grep ".css$"))
+
+if [[ "$STAGED" = "" ]]; then
+  exit 0
+fi
+
+# Run stylelint for all staged files
+npx stylelint "${STAGED[@]}"
+
+exit $?
