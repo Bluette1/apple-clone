@@ -1,12 +1,12 @@
 #!/bin/bash
 
-# branch="$(git rev-parse --abbrev-ref HEAD)"
+branch="$(git rev-parse --abbrev-ref HEAD)"
 
 # Do not commit directly to master at this stage
-# if [ "$branch" = "master" ]; then
-#   echo "Committing directly to master branch is forbidden at this stage"
-#   exit 1 
-# fi
+if [ "$branch" = "master" ]; then
+  echo "Committing directly to master branch is forbidden at this stage"
+  exit 1 
+fi
 
 # Run gulp build 
 gulp buildcss
