@@ -14,7 +14,7 @@ This is the fourth project of the Main HTML/CSS curriculum at [Microverse](https
 
 ## Live Demo
 
-[Live Demo](https://rawcdn.githack.com/Bluette1/apple-clone/1ca2c3fd5ac703f71e6fe4e424fb6f6a62972153/index.html)
+[Live Demo](https://rawcdn.githack.com/Bluette1/apple-clone/a6bb9f2f4c34fd3c1ab68d7c6174fe1975aabca2/index.html)
 
 ## Authors
 
