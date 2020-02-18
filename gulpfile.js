@@ -14,7 +14,7 @@ gulp.task('buildcss', function(done) {
 // This is the gulp watch function to keep the build css file up-to-date
 gulp.task('watchcss', function(done) {
 
-    gulp.watch('index.css', function(done){
+    gulp.watch('index.css', {delay: 10000}, function(done){
             gulp.src('index.css')
             .pipe(autoprefixer())
             .pipe(gulp.dest('build'));
